@@ -24,7 +24,7 @@ def style_background_dashbord():
     st.markdown("""
             <style>
                 .stApp {
-                    background : #121212 !important;
+                    background : #E0E3FF !important;
                 }
             <style>
                 """,

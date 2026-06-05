@@ -1,5 +1,12 @@
-venv
+venv/
 practice
 __pycache__/
 uploads/
 recordings/
+
+.env
+.vscode
+*.pyc
+.streamlit/
+
+dist/
