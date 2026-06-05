@@ -1,0 +1,24 @@
+# utilities
+numpy   
+pandas  
+
+# Face reconigation 
+scikit-learn
+
+# Image operations
+dlib-bin
+
+# image embeddings generation 
+git+https://github.com/ageitgey/face_recognition_models.git
+setuptools   # support installation and setup of non python packages 
+
+
+# Database
+supabase   # database
+bcrypt     # provides hashing methods 
+
+
+segno    # QR code generation 
+pillow   # image procesing
+
+streamlit 
