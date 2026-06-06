@@ -13,7 +13,7 @@ def check_pass(pwd, hashed):
 # Check for the unique username, return false if username is taken initially.
 def check_teacher_exists(username):
     response = supabase.table("teachers").select("username").eq("username", username).execute()
-    return len(response) > 0
+    return len(response.data) > 0
 
 # creat teacher's account.
 def create_teacher(username, password, name):
@@ -22,14 +22,18 @@ def create_teacher(username, password, name):
         "password" : hash_pass(password),
         "name" : name
     }
-    response = supabase.table["teachers"].insert(data).execute()
+    response = supabase.table("teachers").insert(data).execute()
     return response.data
 
 # Teacher's login.
 def teacher_login(username, password):
-    resopnse = supabase.table["teachers"].select("*").eq("username", username).execute()
-    if resopnse.data:
-        teacher = resopnse.data[0]
+    response = supabase.table("teachers").select("*").eq("username", username).execute()
+    if response.data:
+        teacher = response.data[0]
         if check_pass(password, teacher['password']):
             return teacher
     return None
+
+def get_all_students():
+    response = supabase.table('students').select("*").execute()
+    return response.data

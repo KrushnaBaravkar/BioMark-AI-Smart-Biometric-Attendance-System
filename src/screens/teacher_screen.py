@@ -11,7 +11,7 @@ def teacher_screen():
 
     if "teacher_data" in st.session_state:
         teacher_dashbord()
-    elif st.session_state['login_type'] == 'teacher_login' or 'teacher_login_type' not in st.session_state:
+    elif st.session_state['login_type'] == 'teacher_login':
         teacher_screen_login()
     elif st.session_state['login_type'] == 'teacher_register':
         teacher_screen_register()
