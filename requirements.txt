@@ -22,3 +22,7 @@ segno    # QR code generation
 pillow   # image procesing
 
 streamlit 
+
+# voice processing
+librosa     # loading data, reducing noice
+resemblyzer     # embedding generation of voice data
