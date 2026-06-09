@@ -1,10 +1,11 @@
-from resemblyzer import VoiceEncoder, preprecess_wav
+from resemblyzer import VoiceEncoder
+from resemblyzer.audio import preprocess_wav   
 import numpy as np
 import io  # Helping librosa to load files 
 import librosa
 import streamlit as st
 
-@st.cache_resources
+@st.cache_resource
 def load_voice_encoder():
     return VoiceEncoder()
 
